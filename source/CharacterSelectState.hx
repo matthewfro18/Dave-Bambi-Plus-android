@@ -217,6 +217,9 @@ class CharacterSelectState extends MusicBeatState
 		new CharacterInSelect('question', [0, 0, 3, 0], [
 			new CharacterForm('question-playable', 'Question Bambi', [0, 0, 3, 0]),
 		]),
+		new CharacterInSelect('corruptzie', [1, 1, 1, 1], [
+			new CharacterForm('corruptzie', 'Corruptzie (A.K.A Austin)', [1,1,1,1]),
+		]),
 		new CharacterInSelect('shinx', [1, 1, 1, 1], [
 			new CharacterForm('shinx', 'Shinx', [1, 1, 1, 1]),
 		]),
