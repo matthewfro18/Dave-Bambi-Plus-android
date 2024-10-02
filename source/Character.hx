@@ -2739,6 +2739,31 @@ class Character extends FlxSprite
 				flipX = false;
 	
 				playAnim('idle');
+			case 'gooey':
+				frames = Paths.getSparrowAtlas('characters/Gooey', 'shared');
+				animation.addByPrefix('idle', 'idle', 24, false);
+				for (anim in ['left', 'down', 'up', 'right'])
+				{
+					animation.addByPrefix('sing${anim.toUpperCase()}', '$anim', 24, false);
+					animation.addByPrefix('sing${anim.toUpperCase()}miss', 'miss $anim', 24, false);
+				}
+				animation.addByPrefix('hey', 'hey', 24, false);
+				
+				animation.addByPrefix('dodge', "dodge", 24, false);
+				animation.addByPrefix('scared', 'scared', 24);
+				animation.addByPrefix('hit', 'hurt', 24, false);
+
+				setGraphicSize(Std.int(width * 1.1));
+
+				loadOffsetFile(curCharacter);
+	
+				barColor = FlxColor.fromRGB(128, 240, 203);
+
+				globalOffset = [40, 400];
+				playAnim('idle');
+				antialiasing = false;
+				nativelyPlayable = true;
+				flipX = false;
 
 		}
 		dance();
