@@ -214,6 +214,9 @@ class CharacterSelectState extends MusicBeatState
 		new CharacterInSelect('kapi', [1, 1, 1, 1], [
 			new CharacterForm('kapi', 'Kapi', [1, 1, 1, 1]),
 		]),
+		new CharacterInSelect('gooey', [0, 0, 3, 0], [
+			new CharacterForm('gooey', 'LeGooey', [0, 0, 3, 0]),
+		]),
 		new CharacterInSelect('question', [0, 0, 3, 0], [
 			new CharacterForm('question-playable', 'Question Bambi', [0, 0, 3, 0]),
 		]),
@@ -287,6 +290,7 @@ class CharacterSelectState extends MusicBeatState
 		unlockCharacter('question');
 		unlockCharacter('question-playable');
 		unlockCharacter('corruptzie');
+		unlockCharacter('gooey');
 		if (PlayState.SONG.song.toLowerCase() == 'exploitation' && !FlxG.save.data.modchart)
 		{
 			if (FlxG.fullscreen)
